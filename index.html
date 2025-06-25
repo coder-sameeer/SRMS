@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="main">
+            <h1>Student Result Management System</h1><ion-icon name="menu-outline" onClick="toggleMenubar()" id="menubar"></ion-icon>
+        </div>
+        <div id="res">
+            <div class="sr">
+                <input type="text" id="search-input" placeholder="Search Name...">
+                <button id="search" onclick="search()"><ion-icon name="search-outline"></ion-icon></button>
+            </div>
+            <button onclick="show()" id="add-btn">Add Student</button>
+        </div>
+    </header>
+    <main>
+        <form id="form">
+            <div class="close-form" ><p onclick="closeForm()">&times;</p></div>
+            <h2>Student Details</h2>
+            <label for="student-name">Student Name</label><br>
+            <input type="text" id="student-name" placeholder="Student Name" name="student-name" required><br>
+            <label for="student-roll">Student Roll</label><br>
+            <input type="number" id="student-roll" placeholder="Student Roll" required><br>
+            <label for="math">Maths</label><br>
+            <input type="number" id="math" placeholder="Enter Maths Marks" required><br>
+            <label for="physics">Physics</label><br>
+            <input type="number" id="physics" placeholder="Enter Physics Marks" required><br>
+            <label for="chemistry">Chemistry</label><br>
+            <input type="number" id="chemistry" placeholder="Enter Chemistry Marks" required><br>
+            <button id="btn" onclick="printvalue()">Confirm</button>
+        </form>
+    </main>
+    <h2 id="strip">Student Result</h2>
+    <section>
+        <table border="1" id="table">
+            <thead>
+                <tr>
+                    <th>S No.</th>
+                    <th>Name</th>
+                    <th>Roll No.</th>
+                    <th>Math</th>
+                    <th>Physics</th>
+                    <th>Chemistry</th>
+                    <th>Status</th>
+                    <th>Total</th>
+                    <th>Percentage</th>
+                    <th>Download</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="results">
+
+                
+            </tbody>
+
+        </table>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
